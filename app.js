@@ -144,7 +144,6 @@ app.controller('home', ['$http', '$scope', '$sce',
 
       $scope.selectGroup = function(obj) {
         $scope.selectedTitle = obj.title;
-
         if (obj.eventKey === "studentshorts") {
           $scope.selectedGroup = $scope.student;
           return;

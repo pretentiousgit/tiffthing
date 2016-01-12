@@ -36,8 +36,9 @@
     </ul>
 
     <h3>Special Events</h3>
-    <div class="row">
+    <div class="row events">
       <div ng-repeat="obj in talks track by $index" class="talks one-third column">
+        <img class="callout" ng-src="{{obj.relatedmedia[0].still}}"/>
         <h4>{{obj.title}}</h4>
         <p>{{obj.rating}}</p>
         <br>
