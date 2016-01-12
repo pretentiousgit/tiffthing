@@ -101,6 +101,7 @@
   font-size: 1.5em;
   padding-top: 40%;
   padding-bottom: 100%;
+  z-index:999;
 }
 
 /*#categories li h1:after {
@@ -132,7 +133,7 @@
 
 #categories li div:hover p {
   top: 0;
-  padding-top: 15%;
+  padding-top: 35%;
 }
 
 /*

@@ -4,7 +4,7 @@ $base-font-size: 1em;
 $caps-font-family: "mic-32-new-rounded-web",sans-serif;
 $base-font-family: "museo-sans",sans-serif;
 $base-font-weight: 200;
-
+$highlight-color: #FF5716;
 /* app css stylesheet */
 
 body {
@@ -94,8 +94,43 @@ h3 {
 }
 
 .hexagon {
-    background: #FF5716;
+    background: $highlight-color;
     em {
       font-style: italic;
     }
+}
+
+.onNow{
+  padding-bottom: 1.2em;
+  div {
+    padding-left: 3em; 
+  }
+  div:hover{
+    background-color: $highlight-color;
+    color: #FFF;
+  }
+}
+
+.tiffBlock{
+  display: inline-block;
+  background-color: $highlight-color;
+  color: #fff;
+  font-weight: bold;
+  font-family: $caps-font-family;
+  padding: 0 5px; 
+}
+
+.selection{
+  position: fixed;
+  bottom:0;
+  background-color: #fff;
+  padding-top:15px;
+  .close {
+    float:right;
+    margin-right: 5%;
+    font-colour: #888;
+    display: block;
+    background-color: #ccc;
+    padding: 5px;
+  }
 }
