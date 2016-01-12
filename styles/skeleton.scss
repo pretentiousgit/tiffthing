@@ -1,0 +1,515 @@
+//colors
+$color_log_cabin_approx: #222;
+$color_scooter_approx: #1eaedb;
+$color_cerulean_approx: #0fa0ce;
+$color_fuscous_gray_approx: #555;
+$color_pink_swan_approx: #bbb;
+$color_mine_shaft_approx: #333;
+$color_suva_gray_approx: #888;
+$white: #fff;
+$color_picton_blue_approx: #33c3f0;
+$color_celeste_approx: #d1d1d1;
+$seashell: #f1f1f1;
+$color_bon_jour_approx: #e1e1e1;
+
+//fonts
+$font_0: Raleway;
+$font_1: HelveticaNeue;
+$font_2: Helvetica Neue;
+$font_3: Helvetica;
+$font_4: Arial;
+$font_5: sans-serif;
+
+//@extend-elements
+//original selectors
+//.column, .columns
+%extend_1 {
+  width: 100%;
+  float: left;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%extend_2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+//original selectors
+//.button, button, input[type="submit"], input[type="reset"], input[type="button"]
+%extend_3 {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: $color_fuscous_gray_approx;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 4px;
+  border: 1px solid $color_pink_swan_approx;
+  cursor: pointer;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+
+//original selectors
+//.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, button:focus, input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus
+%extend_4 {
+  color: $color_mine_shaft_approx;
+  border-color: $color_suva_gray_approx;
+  outline: 0;
+}
+
+//original selectors
+//.button.button-primary, button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary
+%extend_5 {
+  color: $white;
+  background-color: $color_picton_blue_approx;
+  border-color: $color_picton_blue_approx;
+}
+
+//original selectors
+//.button.button-primary:hover, button.button-primary:hover, input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover, .button.button-primary:focus, button.button-primary:focus, input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus
+%extend_6 {
+  color: $white;
+  background-color: $color_scooter_approx;
+  border-color: $color_scooter_approx;
+}
+
+//original selectors
+//input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select
+%extend_7 {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: $white;
+  border: 1px solid $color_celeste_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 4px;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+
+//original selectors
+//label, legend
+%extend_8 {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+
+//original selectors
+//th, td
+%extend_9 {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid $color_bon_jour_approx;
+}
+
+//original selectors
+//.container:after, .row:after, .u-cf
+%extend_10 {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  &:after {
+    @extend %extend_10;
+  }
+}
+.column {
+  @extend %extend_1;
+}
+.columns {
+  @extend %extend_1;
+}
+@media(min-width: 400px) {
+}
+@media(min-width: 550px) {
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $font_0, $font_1, $font_2, $font_3, $font_4, $font_5;
+  color: $color_log_cabin_approx;
+}
+h1 {
+  @extend %extend_2;
+  font-size: 4.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+}
+h2 {
+  @extend %extend_2;
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+}
+h3 {
+  @extend %extend_2;
+  font-size: 3.0rem;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
+}
+h4 {
+  @extend %extend_2;
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+}
+h5 {
+  @extend %extend_2;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -.05rem;
+}
+h6 {
+  @extend %extend_2;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+a {
+  color: $color_scooter_approx;
+  &:hover {
+    color: $color_cerulean_approx;
+  }
+}
+.button {
+  @extend %extend_3;
+  margin-bottom: 1rem;
+  &:hover {
+    @extend %extend_4;
+  }
+  &:focus {
+    @extend %extend_4;
+  }
+  &.button-primary {
+    @extend %extend_5;
+    &:hover {
+      @extend %extend_6;
+    }
+    &:focus {
+      @extend %extend_6;
+    }
+  }
+}
+button {
+  @extend %extend_3;
+  margin-bottom: 1rem;
+  &:hover {
+    @extend %extend_4;
+  }
+  &:focus {
+    @extend %extend_4;
+  }
+  &.button-primary {
+    @extend %extend_5;
+    &:hover {
+      @extend %extend_6;
+    }
+    &:focus {
+      @extend %extend_6;
+    }
+  }
+}
+input[type="submit"] {
+  @extend %extend_3;
+  &:hover {
+    @extend %extend_4;
+  }
+  &:focus {
+    @extend %extend_4;
+  }
+  &.button-primary {
+    @extend %extend_5;
+    &:hover {
+      @extend %extend_6;
+    }
+    &:focus {
+      @extend %extend_6;
+    }
+  }
+}
+input[type="reset"] {
+  @extend %extend_3;
+  &:hover {
+    @extend %extend_4;
+  }
+  &:focus {
+    @extend %extend_4;
+  }
+  &.button-primary {
+    @extend %extend_5;
+    &:hover {
+      @extend %extend_6;
+    }
+    &:focus {
+      @extend %extend_6;
+    }
+  }
+}
+input[type="button"] {
+  @extend %extend_3;
+  &:hover {
+    @extend %extend_4;
+  }
+  &:focus {
+    @extend %extend_4;
+  }
+  &.button-primary {
+    @extend %extend_5;
+    &:hover {
+      @extend %extend_6;
+    }
+    &:focus {
+      @extend %extend_6;
+    }
+  }
+}
+input[type="email"] {
+  @extend %extend_7;
+  appearance: none;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+input[type="number"] {
+  @extend %extend_7;
+  appearance: none;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+input[type="search"] {
+  @extend %extend_7;
+  appearance: none;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+input[type="text"] {
+  @extend %extend_7;
+  appearance: none;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+input[type="tel"] {
+  @extend %extend_7;
+  appearance: none;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+input[type="url"] {
+  @extend %extend_7;
+  appearance: none;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+input[type="password"] {
+  @extend %extend_7;
+  appearance: none;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+textarea {
+  @extend %extend_7;
+  appearance: none;
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 1.5rem;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+select {
+  @extend %extend_7;
+  margin-bottom: 1.5rem;
+  &:focus {
+    border: 1px solid $color_picton_blue_approx;
+    outline: 0;
+  }
+}
+label {
+  @extend %extend_8;
+  > .label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+  }
+}
+legend {
+  @extend %extend_8;
+}
+fieldset {
+  padding: 0;
+  border-width: 0;
+  margin-bottom: 1.5rem;
+}
+input[type="checkbox"] {
+  display: inline;
+}
+input[type="radio"] {
+  display: inline;
+}
+ul {
+  list-style: circle inside;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+  ol {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+}
+ol {
+  list-style: decimal inside;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  ol {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+  ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+}
+li {
+  margin-bottom: 1rem;
+}
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: $seashell;
+  border: 1px solid $color_bon_jour_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 4px;
+}
+pre {
+  margin-bottom: 2.5rem;
+  > code {
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre;
+  }
+}
+th {
+  @extend %extend_9;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+td {
+  @extend %extend_9;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+input {
+  margin-bottom: 1.5rem;
+}
+blockquote {
+  margin-bottom: 2.5rem;
+}
+dl {
+  margin-bottom: 2.5rem;
+}
+figure {
+  margin-bottom: 2.5rem;
+}
+table {
+  margin-bottom: 2.5rem;
+}
+form {
+  margin-bottom: 2.5rem;
+}
+.u-full-width {
+  width: 100%;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+.u-max-full-width {
+  max-width: 100%;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+.u-pull-right {
+  float: right;
+}
+.u-pull-left {
+  float: left;
+}
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid $color_bon_jour_approx;
+}
+.u-cf {
+  @extend %extend_10;
+}
+@media(min-width: 750px) {
+}
+@media(min-width: 1000px) {
+}
+@media(min-width: 1200px) {
+}
+.row:after {
+  @extend %extend_10;
+}

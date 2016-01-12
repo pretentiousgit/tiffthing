@@ -1,0 +1,101 @@
+$text-color: #000;
+$primary-color: #333;
+$base-font-size: 1em;
+$caps-font-family: "mic-32-new-rounded-web",sans-serif;
+$base-font-family: "museo-sans",sans-serif;
+$base-font-weight: 200;
+
+/* app css stylesheet */
+
+body {
+    width: 100%;
+    font-family: $base-font-family;
+    .container {
+        display: block;
+        .breakout {
+            width: 100%;
+            position: relative;
+            left: -150px;
+        }
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $caps-font-family;
+    font-weight: bold;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+ font-size: 3em; 
+}
+
+h3 {
+  font-size: 2em; 
+}
+
+  h3.subhead {
+    margin-top: -25px;
+    margin-bottom:55px;
+    font-weight: light;
+  }
+
+.talks {
+  h4 {
+    margin-bottom:-12px;
+  }
+}
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+
+/* D3 JS CSS */
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.hexagon {
+    background: #FF5716;
+    em {
+      font-style: italic;
+    }
+}

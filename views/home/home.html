@@ -1,0 +1,33 @@
+<div class="container one column">
+  <h1>tiff. {{country}} {{eventcollection}}</h1>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <h3>Talks</h3>
+  <div class="row">
+  <div ng-repeat="obj in talks track by $index" class="talks one-third column">
+    <h4>{{obj.title}}</h4>
+    <p>{{obj.rating}}</p>
+    <br>
+    <span ng-bind-html="obj.filmpitch"></span></p>
+  </div>
+    
+  </div>
+  
+  <h3>
+    <div ng-repeat="obj in events track by $index" class="events">
+      {{obj.title}}
+    </div>
+  </h3>
+  <h3>Films</h3>
+  <ul id="categories" class="clr">
+    <li ng-repeat="obj in films track by $index" ng-click="">
+      <div class="hexagon">
+        <h1>{{obj.title}}</h1>
+        <p ng-bind-html="obj.filmpitch"></p>
+      </div>
+    </li>
+  </ul>
+
+
+</div>
