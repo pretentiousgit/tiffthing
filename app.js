@@ -1,5 +1,9 @@
 'use strict';
 
+
+// TODO: Add a highlight bar behind the titles so they're always visible
+// Fix the shorts so they're split into programs
+
 var app = angular.module('app', [
   'ui.router',
   'Views'
@@ -108,10 +112,6 @@ app.controller('home', ['$http', '$scope', '$sce',
         }
       });
 
-      $scope.cuts = _.filter($scope.shorts, function(n) {
-        return n.PrimaryFestivalProgramme == "Short Cuts";
-      });
-
       $scope.otherShorts = _.filter($scope.shorts, function(n) {
         if (n.productionCompany) {
           var l = n.productionCompany.toLowerCase();
@@ -121,6 +121,18 @@ app.controller('home', ['$http', '$scope', '$sce',
           }
         }
       });
+
+      $scope.cuts = _.filter($scope.otherShorts, function(n){
+        if(n.PrimaryFestivalProgramme && n.PrimaryFestivalProgramme === "Short Cuts"){
+          return n;
+        }
+      })
+
+      $scope.other = _.filter($scope.otherShorts, function(n){
+        if(!n.PrimaryFestivalProgramme){
+          return n;
+        }
+      })      
 
       $scope.talks = _.filter(events, function(n) {
         var l = n.title.toLowerCase();
@@ -153,11 +165,7 @@ app.controller('home', ['$http', '$scope', '$sce',
           return;
         }
         if (obj.eventKey === "canadastoptenshorts3") {
-          console.log('shorts', $scope.otherShorts);
-          var reply = _.filter($scope.shorts, function(n){
-            return !n.PrimaryFestivalProgramme;
-          })
-          $scope.selectedGroup = reply; 
+          $scope.selectedGroup = $scope.other; 
         }
          else {
           $scope.selectedGroup = $scope.films;
